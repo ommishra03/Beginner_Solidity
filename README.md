@@ -4,8 +4,8 @@ A basic Solidity smart contract for a token called "Sumit" with the symbol "SK" 
 
 ## Contract Information
 
-- **Token Symbol**: OmKreation 
-- **Token Name**: Kreate
+- **Token Abbrevation**: OMKREATION
+- **Token Name**: KREAT
 - **Total Supply**: Starting at 0
 
 ## Features
@@ -18,8 +18,8 @@ A basic Solidity smart contract for a token called "Sumit" with the symbol "SK" 
 ### Open Variables
 
 - {string public tokenName}: The token's name.
-- {string public tokenSymbol}: The token's symbol.
-- {uint256 public totalSupply}: The token's total supply.
+- {string public tokenAbbrv}: The token's Abbreviation.
+- {uint public totalSupply}: The token's total supply.
 
 ### Mapping
 
