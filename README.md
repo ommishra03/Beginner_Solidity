@@ -1,32 +1,44 @@
-# Beginner_Solidity
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.26;
+**#Smart Contract for MyToken**
 
-contract MyToken {
+A basic Solidity smart contract for a token called "Sumit" with the symbol "SK" can be found in this repository. The contract maintains balances for various addresses and permits token minting and burning.
 
-    //Public Variable
-    
-    string public tokenName = "OMKREATION";
-    string public tokenAbbrv = "KREAT";
-    uint public totalSupply = 0;
+## Contract Information
 
-    // Mapping from address to balances
+- **Token Symbol**: OmKreation 
+- **Token Name**: Kreate
+- **Total Supply**: Starting at 0
 
-    mapping(address => uint) public balances;
+## Features
 
-    // Mint function to create new token
+- Minting tokens: This adds more tokens to the total supply and credits the designated address with them.
+- Burning tokens: If the address has enough tokens, this reduces the total supply and debits the designated address.
 
-    function mint(address Add, uint value) public {
-        totalsupply += value;
-        balances[Add] += value;
-    }
+## Functions
 
-    // Burn function to destroy the token 
+### Open Variables
 
-    function burn(address Add, uint value) public {
-        if (balances[Add] >= value) {
-            totalsupply -= value;
-            balances[Add] -= value;
-        }
-    }
-}
+- {string public tokenName}: The token's name.
+- {string public tokenSymbol}: The token's symbol.
+- {uint256 public totalSupply}: The token's total supply.
+
+### Mapping
+
+A mapping that maintains track of the balance for each address is `mapping(address => uint256) public balances}.
+
+### Mint Function - 
+
+Tokens can be created and assigned to a specific address using the `mint` function. As a result, the recipient address's balance and the total number of tokens available increase.
+
+### Burn Function: 
+
+Using the burn function, tokens from a given address can be destroyed. Assuming the holder has sufficient tokens to burn, this reduces both the total supply of tokens and the balance in their address.
+
+### Executing Program
+
+To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at [Remix](https://remix.ethereum.org/).
+
+#Author
+Om Mishra
+
+#License
+This project is licensed under the MIT License.
