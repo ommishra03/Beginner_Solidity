@@ -1,6 +1,6 @@
 **#Smart Contract for MyToken**
 
-A basic Solidity smart contract for a token called "Sumit" with the symbol "SK" can be found in this repository. The contract maintains balances for various addresses and permits token minting and burning.
+A basic Solidity smart contract for a token called "OMKREATION" with the symbol "KREAT" can be found in this repository. The contract maintains balances for various addresses and permits token minting and burning.
 
 ## Contract Information
 
@@ -33,9 +33,35 @@ Tokens can be created and assigned to a specific address using the `mint` functi
 
 Using the burn function, tokens from a given address can be destroyed. Assuming the holder has sufficient tokens to burn, this reduces both the total supply of tokens and the balance in their address.
 
+# Interacting with the Contract
+You can interact with the deployed contract using Ethereum wallets or by writing scripts in programming languages like JavaScript. Here's how you can interact with the contract:
+
+Minting Tokens: Call the `mint` function with the address where you want to send the tokens and the amount to mint.
+
+Burning Tokens: Call the `burn` function with the address from where you want to burn the tokens and the amount to burn.
+
+
 ### Executing Program
 
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at [Remix](https://remix.ethereum.org/).
+#### How to Run the Program in Remix
+1. **Compile the Smart Contract**
+   - Select the `Solidity Compiler` tab.
+   - Ensure the compiler version is set to `0.8.18`.
+   - Click `Compile MyToken.sol`.
+
+2. **Deploy the Contract**
+   - Go to the `Deploy & Run Transactions` tab.
+   - Select the appropriate environment (e.g., JavaScript VM).
+   - Click `Deploy`.
+
+3. **Interact with the Contract**
+   - After deploying, the contract will appear under `Deployed Contracts`.
+   - To mint tokens:
+     - Input the address and the amount of tokens to mint.
+     - Click the `mint` button.
+   - To burn tokens:
+     - Input the address and the amount of tokens to burn.
+     - Click the `burn` button.
 
 #Author
 Om Mishra
