@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+
 /*
        REQUIREMENTS
     1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
@@ -12,35 +15,30 @@
        to the amount that is supposed to be burned.
 */
 
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.26;
-
 contract MyToken {
 
     //Public Variable
     
     string public tokenName = "OMKREATION";
     string public tokenAbbrv = "KREAT";
-    uint public totalSupply = 0;
+    uint256 public totalSupply = 0;
 
     // Mapping from address to balances
 
-    mapping(address => uint) public balances;
+    mapping(address => uint256) public balances;
 
     // Mint function to create new token
 
-    function mint(address Add, uint value) public {
+    function mint(address Add, uint256 value) public {
         totalSupply += value;
         balances[Add] += value;
     }
 
     // Burn function to destroy the token 
 
-    function burn(address Add, uint value) public {
-        if (balances[Add] >= value) {
+    function burn(address Add, uint256 value) public {
+        require(balances[Add] >= value); 
             totalSupply -= value;
             balances[Add] -= value;
         }
     }
-}
-
