@@ -63,8 +63,11 @@ Burning Tokens: Call the `burn` function with the address from where you want to
      - Input the address and the amount of tokens to burn.
      - Click the `burn` button.
 
-#Author
-Om Mishra
+## Author
 
-#License
-This project is licensed under the MIT License.
+Name - [Om Mishra](ommishra03)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
