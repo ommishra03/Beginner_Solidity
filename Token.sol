@@ -37,8 +37,9 @@ contract MyToken {
     // Burn function to destroy the token 
 
     function burn(address Add, uint256 value) public {
-        require(balances[Add] >= value); 
+        if(balances[Add] >= value){
             totalSupply -= value;
             balances[Add] -= value;
         }
+    }
     }
